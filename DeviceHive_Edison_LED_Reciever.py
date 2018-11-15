@@ -25,13 +25,13 @@ class ReceiverHandler(Handler):
         print('Notification "%s" received' % notification.notification)
         led = mraa.Gpio(2)
         led.dir(mraa.DIR_OUT)
-        if notification.notification[4:5] == 'ON':
+        if notification.notification[4:6] == 'ON':
             self._device.data = {'LED': 'ON'}
             led.write(1)
             print("LED is ON!")
             self._device.save()
         else:
-            if (notification.notification[4:6] == 'OFF'):
+            if (notification.notification[4:7] == 'OFF'):
                 self._device.data = {'LED': 'OFF'}
                 led.write(0)
                 print("LED is OFF")
