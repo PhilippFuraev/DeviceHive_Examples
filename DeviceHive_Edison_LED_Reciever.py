@@ -1,5 +1,6 @@
 from devicehive import Handler
 from devicehive import DeviceHive
+import mraa
 
 
 class ReceiverHandler(Handler):
