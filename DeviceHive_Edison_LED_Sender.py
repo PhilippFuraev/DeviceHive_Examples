@@ -33,8 +33,8 @@ class SenderHandler(Handler):
             self._send_notifications()
 
 
-url = 'http://192.168.31.82/api/rest'
-refresh_token = 'eyJhbGciOiJIUzI1NiJ9.eyJwYXlsb2FkIjp7ImEiOlswXSwiZSI6MTU1ODAyNTQ4NDEyMywidCI6MCwidSI6MSwibiI6WyIqIl0sImR0IjpbIioiXX19.KcZn9s0PjyLvHY-jZ5xc2JKQnqZrqs1ky2oOtVJ4WgQ'
+url = 'https://playground.devicehive.com/api/rest'
+refresh_token = 'eyJhbGciOiJIUzI1NiJ9.eyJwYXlsb2FkIjp7ImEiOlsyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTUsMTYsMTddLCJlIjoxNTU4MDMyMjExMzE3LCJ0IjowLCJ1IjozNTA5LCJuIjpbIjM0NjYiXSwiZHQiOlsiKiJdfX0.UmmgbuogE8DWNnHppUIUxH7t6BRzfoHd8v93BMcSTUY'
 while (True):
     message = input()
     dh = DeviceHive(SenderHandler, device_id="myPC-1", accept_command_name=message)
